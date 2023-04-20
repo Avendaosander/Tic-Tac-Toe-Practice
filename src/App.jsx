@@ -47,14 +47,14 @@ function App() {
 
    return (
       <main className='flex flex-col justify-center items-center'>
-         <h1 className='text-4xl'>Tic Tac Toe</h1>
+         <h1 className='text-2xl sm:text-4xl'>Tic Tac Toe</h1>
          <button
-            className='bg-slate-900 hover:bg-slate-800 mt-5 py-2 px-3 rounded-xl ring-2 ring-white'
+            className='bg-slate-900 hover:bg-slate-800 text-sm sm:text-lg mt-5 py-2 px-3 rounded-xl ring-2 ring-white'
             onClick={reset}
          >
             Reset Game
          </button>
-         <section className='flex justify-around items-center gap-20'>
+         <section className='flex flex-col sm:flex-row justify-around items-center gap-1 sm:gap-10 md:gap-20 my-6 sm:my-0'>
             <Player isSelected={player === MOVEMENTS.X} icon={MOVEMENTS.X}>Player 1</Player>
             <article className='grid grid-cols-3 gap-3 my-6'>
                {board.map((square, i) => {
